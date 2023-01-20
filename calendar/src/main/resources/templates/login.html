@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="sk">
+<!--<html lang="sk">-->
+
+<head>
+    <link th:href="@{/login.css}" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html charset=windows-1250" />
+    <title>Prihlásiť sa</title>
+</head>
+
+
+<body class="main">
+<p class="sign" align="center">Prihlásiť sa</p>
+<div class="form1">
+    <input class="un " type="text" align="center" placeholder="Meno">
+    <input class="pass" type="password" align="center" placeholder="Heslo">
+    <a class="submit" align="center" th:href="@{login/success}">Prihlásiť sa</a>
+    <p class="forgot" align="center"><a href="#">Zabudnuté heslo?</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="sk">
+
+<head>
+    <link rel="stylesheet" th:href="@{/upload.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Načítanie súboru</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+</head>
+
+
+<body class="main">
+<p class="sign" align="center" >Načítanie súboru</p>
+
+
+<div class="file-upload">
+    <input type="file" id="file" name="myfiles[]" multiple />
+</div>
+
+
+<div class="form1">
+    <a class="submit" align="center" th:href="@{/api/calendar}">Odoslať a zobraziť</a>
+</div>
+
+
+</body>
+</html>

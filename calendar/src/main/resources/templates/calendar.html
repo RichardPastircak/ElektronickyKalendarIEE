@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="sk">
+
+<head>
+    <link rel="stylesheet" th:href="@{/calendar.css}">
+<!--    <link rel="script" th:href="@{/calendar.js}">-->
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+
+<div class="wrapper">
+    <div id="current-day-info" class="color">
+
+        <h1 id="app-name-landscape" class="off-color center default-cursor">
+            Zmenový kalendár
+        </h1>
+
+        <h3 id="current-year"></h3 >
+        <h3 id="cur-day"></h3>
+        <h3 id="cur-month"></h3>
+        <h3 id="cur-date"></h3>
+        <div class="butons">
+            <div class="period"> Obdobie <input type="date" id="dateInput"> </div>
+                <button id="changePeriod" class="button-44" role="button" th:data-parser="${@parser.parseData('D')}">Zmenit obdobie</button>
+                <button id="ZmenaA" class="button-44" role="button" th:data-parser="${@parser.parseData('A')}">Zmena A</button>
+                <button id="ZmenaB" class="button-44"  role="button" th:data-parser="${@parser.parseData('B')}">Zmena B</button>
+                <button id="ZmenaC" class="button-44"  role="button" th:data-parser="${@parser.parseData('C')}">Zmena C</button>
+                <button id="ZmenaD" class="button-44"  role="button" th:data-parser="${@parser.parseData('D')}">Zmena D</button>
+            </div>
+        <a id="prepojenie_uploadu" th:href="@{login}">Nahrať zmeny</a>
+
+
+        <!-- HTML <button class="button-44" role="button">Button 44</button> !-->
+
+    </div>
+
+<!--    <div><span class="skuska"></span></div>-->
+
+    <div id="calender">
+        <h1 id="app-name-portrait" class="center ">Zmenový kalendár</h1>
+        <h2 id="Zmena" >Zmena A</h2>
+        <!-- h1 'off-color' class was removed -->
+        <table>
+            <thead class="color">
+            <tr>
+                <th colspan="7" class="border-color">
+                    <h4 id="cal-year" contenteditable="true">2018</h4>
+                    <div>
+                        <i class="fas fa-caret-left icon"> < </i>
+                        <h3 id="cal-month">july</h3>
+                        <i class="fas fa-caret-right icon"> > </i>
+                    </div>
+                </th>
+            </tr>
+
+            <tr>
+                <th class="weekday border-color">Mon</th>
+                <th class="weekday border-color">Tue</th>
+                <th class="weekday border-color">Wed</th>
+                <th class="weekday border-color">Thu</th>
+                <th class="weekday border-color">Fri</th>
+                <th class="weekday border-color">Sat</th>
+                <th class="weekday border-color">Sun</th>
+
+            </tr>
+            </thead>
+
+            <tbody id="table-body">
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td class="tooltip-container">
+                    <span class="day">1</span>
+                    <img src="./images/note1.png" alt="note" />
+                    <span class="tooltip"> this is pretty tooltip</span>
+                </td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+                <td>1</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <div class='my-legend'>
+        <div class='legend-scale'>
+            <ul class='legend-labels'>
+                <li><span style='background:#bacb96;'></span>Ranná zmena</li>
+                <li><span style='background:#ebb78c;'></span>Poobedná zmena</li>
+                <li><span style='background:#91accc;'></span>Nočná zmena</li>
+                <!--<li><span style='background:#31B2FC;'></span>Celozávodná dovolenka</li>-->
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<script type="text/javascript" th:src="@{/calendar.js}"></script>
+<script type="text/javascript" th:src="@{/parser.js}"></script>
+</body>
