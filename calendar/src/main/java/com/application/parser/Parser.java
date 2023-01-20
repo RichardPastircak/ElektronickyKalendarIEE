@@ -29,7 +29,7 @@ public class Parser {
 //
 //        System.out.println(shiftName + " " + currentMonth);
         //File excelFile = new File("C:\\Programy\\IntelliJ IDEA\\projects\\elektronicky-zmenovy-kalendar\\calendar\\src\\main\\resources\\kalendar.xlsx");
-        File excelFile = new File("/root/calendar/src/main/resources/\\kalendar.xlsx");
+        File excelFile = new File("/root/calendar/src/main/resources/kalendar.xlsx");
         FileInputStream fis = new FileInputStream(excelFile);
         DataFormatter formatter = new DataFormatter();
         XSSFWorkbook wb = new XSSFWorkbook(fis);
